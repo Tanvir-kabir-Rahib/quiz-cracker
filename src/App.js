@@ -7,7 +7,8 @@ import Main from './layouts/Main';
 import Topics from './components/Topics/Topics';
 import NotFound from './components/NotFound/NotFound';
 import Statistics from './components/Statistics/Statistics';
-import Blog from './components/Blog/Blog';
+import Home from './components/Home/Home';
+import Blogs from './components/Blogs/Blogs';
 
 function App() {
   const router = createBrowserRouter([
@@ -17,10 +18,23 @@ function App() {
       children: [
         {
           path: "/",
-          element: <Topics></Topics>
+          loader: () => {
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+          element: <Home></Home>
         },
         {
           path: "/home",
+          loader: () => {
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
+          element: <Home></Home>
+        },
+        {
+          path: "/topics",
+          loader: () => {
+          return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
           element: <Topics></Topics>
         },
         {
@@ -29,7 +43,7 @@ function App() {
         },
         {
           path: "/blogs",
-          element: <Blog></Blog>
+          element: <Blogs></Blogs>
         }
       ]
     },
@@ -39,7 +53,7 @@ function App() {
     }
   ])
   return (
-    <div className="">
+    <div className="m-10">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
