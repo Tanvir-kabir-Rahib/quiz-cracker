@@ -19,23 +19,17 @@ function App() {
       children: [
         {
           path: "/",
-          loader: () => {
-          return fetch('https://openapi.programming-hero.com/api/quiz')
-          },
+          loader: quizLoader,
           element: <Home></Home>
         },
         {
           path: "/home",
-          loader: () => {
-          return fetch('https://openapi.programming-hero.com/api/quiz')
-          },
+          loader: quizLoader,
           element: <Home></Home>
         },
         {
           path: "/topics",
-          loader: () => { 
-          return fetch('https://openapi.programming-hero.com/api/quiz')
-          },
+          loader: quizLoader,
           element: <Topics></Topics>
         },
         {

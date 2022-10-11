@@ -1,6 +1,6 @@
 .banner-bg{
     background-image: url("../../bg-banner.png");
-    max-width: 90%;
-    margin: 0 auto;
+    width: 90%;
+    margin: 100px auto;
     border-radius: 24px;
 }

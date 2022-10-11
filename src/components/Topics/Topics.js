@@ -1,12 +1,15 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Topic from '../Topic/Topic';
 
 const Topics = () => {
-//     const data = useLoaderData()
-//     console.log(data)
+    const quizCategories = useLoaderData();
+    const categories = quizCategories.data;
     return (
-        <div>
-            <h2>This is Topics </h2>
+        <div className='grid lg:grid-cols-2 gap-12 w-4/5 mx-auto'>
+            {
+                categories.map(category => <Topic key={category.id} category={category}></Topic>)
+            }
         </div>
     );
 };
