@@ -6,9 +6,9 @@ import "./NotFound.css"
 const NotFound = () => {
     return (
         <div>            
-            <p className='text-center text-4xl font-bold'>Page Not Found</p>
-            <img src={notfound404} alt=""/>
-            <p className='text-center text-3xl font-semibold'>Return <Link className='underline link' to="/home">Home</Link></p>
+            <p className='notfound-p text-center text-4xl font-bold'>Page Not Found</p>
+            <img className='notfound-img' src={notfound404} alt=""/>
+            <p className='notfound-p text-center text-3xl font-semibold'>Return <Link className='underline link' to="/home">Home</Link></p>
         </div>
     );
 };

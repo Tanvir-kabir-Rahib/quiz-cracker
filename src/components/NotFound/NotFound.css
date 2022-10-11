@@ -1,10 +1,10 @@
-img {
+.notfound-img {
     max-width: 700px;
     max-height: 700px;
     margin: 0 auto;
 }
 
-p{
+.notfound-p{
     color: #027dff;
 }
 
