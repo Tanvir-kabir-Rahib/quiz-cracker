@@ -5,7 +5,7 @@ import "./NavBar.css"
 
 const NavBar = () => {
     return (
-        <nav className='flex justify-between items-center mb-12'>
+        <nav className='flex justify-between items-center mb-24'>
             <div className='flex items-center'>
                 <img src={favicon} alt=""/>
                 <p className='text-3xl ml-3 font-semibold logo-color'>Web Dev Quizer</p>
