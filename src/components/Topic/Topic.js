@@ -5,7 +5,7 @@ import "./Topic.css"
 
 const Topic = ({category,showQuizs}) => {
     return (
-        <div className='flex border border-gray-400 rounded-xl'>
+        <div className='flex border shadow-lg rounded-xl'>
             <div className='bg-gray-200 rounded-xl mr-2 md:mr-5'>
                 <img className='categroy-img' src={category.logo} alt=""/>
             </div>
