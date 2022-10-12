@@ -11,3 +11,9 @@
     background-color: #5dd6c8;
 
 }
+
+@media only screen and (max-width : 640px) {
+    .categroy-img{
+        max-width: 148px;
+    }
+}

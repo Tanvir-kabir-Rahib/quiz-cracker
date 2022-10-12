@@ -10,9 +10,9 @@ const Topic = ({category}) => {
                 <img className='categroy-img' src={category.logo} alt=""/>
             </div>
             <div>
-                <p className='text-clr text-3xl font-medium my-3'>{category.name}</p>
-                <p className='text-clr text-xl my-5'>Total Questions: {category.total}</p>
-                <button className='text-lg font-medium py-2 px-5 btn-bg rounded-full text-white'>Start Practice <FontAwesomeIcon className='text-3xl align-middle ml-2' icon={faArrowRightLong} /></button>
+                <p className='text-clr text-xl md:text-3xl font-medium my-3'>{category.name}</p>
+                <p className='text-clr md:text-xl my-5'>Total Questions: {category.total}</p>
+                <button className='md:text-lg font-medium py-2 px-5 btn-bg rounded-full text-white'>Start Practice <FontAwesomeIcon className='text-xl md:text-3xl align-middle ml-1 md:ml-2' icon={faArrowRightLong} /></button>
             </div>
         </div>
     );

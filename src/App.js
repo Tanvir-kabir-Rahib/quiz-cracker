@@ -49,7 +49,7 @@ function App() {
     }
   ])
   return (
-    <div className="m-10">
+    <div className="m-4 md:m-10">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
