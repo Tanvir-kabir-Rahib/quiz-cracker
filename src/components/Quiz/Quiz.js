@@ -7,10 +7,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = ({ quiz }) => {
+    const [stopSelection, setStopSelection] = useState(false)
     const [selection, setSelection] = useState("") 
     const checkAns = (selected) => {
         const answer = quiz.correctAnswer;
-        setSelection(selected)
+        setSelection(selected);
+        setStopSelection(!stopSelection)
         if (answer === selected){
             toast("Correct Answer")
         }
@@ -29,7 +31,7 @@ const Quiz = ({ quiz }) => {
             </div>
             <div className='grid md:grid-cols-2 gap-5'>
                 {
-                    quiz.options.map((option,idx) => <Options key={idx} checkAns={checkAns} selection={selection} option={option}></Options>)
+                    quiz.options.map((option,idx) => <Options key={idx} checkAns={checkAns} selection={selection} option={option} stopSelection={stopSelection}></Options>)
                 }
             </div>
             <ToastContainer/>
